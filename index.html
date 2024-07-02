@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e1aef60846.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <br><br>
+        <h1>TO DO LIST</h1>
+        <br><br>
+        <form id="addTask">
+            <label for="taskTitle">Task:</label>
+            <input type="text" id="taskTitle" name="taskTitle">
+
+            <label for="daysWeek">Day: </label>
+
+            <select id="daysWeek" name="daysWeek">
+                <option value=""></option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+
+            <label for="startTime">Start time: </label>
+            
+            <select id="startTime" name="startTime">
+                <option value=""></option>
+            </select>
+
+            <label for="endTime">End time: </label>
+
+            <select id="endTime" name="endTime">
+                <option value=""></option>
+            </select>
+            
+            <label for="categories">Category: </label>
+
+            <select id="categories" name="categories">
+                <option value=""></option>
+                <option value="Indispensable" style.td="background-color: aqua;">Indispensable</option>
+                <option value="High priority">High priority</option>
+                <option value="Medium priority">Medium priority</option>
+                <option value="Low priority">Low priority</option>
+                <option value="Don't do this again">Don't do this again</option>
+            </select>
+            <button id="submit" type="submit">ADD</button>
+        </form>
+        <br><br>
+        <table id="table">
+            <thead id="header">
+                <tr>
+                    <th>Task</th>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Category</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+        <br><br>
+        <h4>Organize your routine by managing your tasks according to your priorities.<br>
+            A routine full of important and productive tasks makes you a better person!</h4>
+        <br><br>
+        <button onclick="save()" id="save">SAVE DATA</button>
+        <button onclick="upload()" id="upload">LOAD DATA</button>
+        <br><br>
+        <div id="message"></div>
+        <br><br>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
